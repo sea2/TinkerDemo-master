@@ -1,5 +1,8 @@
 # TinkerDemo-master
-注意gradle文件的
+注意gradle文件的 tinkerOldApkPath = "${bakPath}/app-release-0824-15-32-27.apk"
+和 tinkerApplyResourcePath = "${bakPath}/app-release-0824-15-32-27-R.txt"
+都是原apk文件放在bakApk文件夹里的名字，使用Tinker Gradle打包的时候要与之比对生成补丁文件
+所以每次生成补丁文件的时候偶都要配置这个地方
 
 ext {
     tinkerEnabled = true
