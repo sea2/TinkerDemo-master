@@ -1,10 +1,9 @@
 package com.youxiake.tinkerdemo;
 
 import android.os.Bundle;
-import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
-
-import com.tencent.tinker.lib.tinker.TinkerInstaller;
+import android.util.Log;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,7 +14,11 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        //进行补丁的操作
-        TinkerInstaller.onReceiveUpgradePatch(this, Environment.getExternalStorageDirectory().getAbsolutePath()+"/patch");
+        new DownLoadPatchThreadUtil(this).downLoadIng();
+
+        Log.e("log", "还多了log");
+
+
+
     }
 }

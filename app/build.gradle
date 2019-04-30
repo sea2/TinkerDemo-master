@@ -49,11 +49,11 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.1.1'
     testCompile 'junit:junit:4.12'
     //可选，用于生成application类
-    provided('com.tencent.tinker:tinker-android-anno:1.7.7')
+    provided('com.tencent.tinker:tinker-android-anno:1.9.1')
     //tinker的核心库
-    compile('com.tencent.tinker:tinker-android-lib:1.7.7')
+    compile('com.tencent.tinker:tinker-android-lib:1.9.1')
 
-    compile "com.android.support:multidex:1.0.1"
+    compile "com.android.support:multidex:1.0.3"
 }
 
 
@@ -61,11 +61,11 @@ def bakPath = file("${buildDir}/bakApk/")
 
 ext {
     tinkerEnabled = true
-    tinkerOldApkPath = "${bakPath}/app-release-0824-15-32-27.apk"
+    tinkerOldApkPath = "${bakPath}/app-release-0429-15-39-40.apk"
     //proguard mapping file to build patch apk
     tinkerApplyMappingPath = "${bakPath}/"
     //resource R.txt to build patch apk, must input if there is resource changed
-    tinkerApplyResourcePath = "${bakPath}/app-release-0824-15-32-27-R.txt"
+    tinkerApplyResourcePath = "${bakPath}/app-release-0429-15-39-40-R.txt"
 }
 
 def getOldApkPath() {
